@@ -1,3 +1,9 @@
+import { Header } from "./layout/header";
+
 export const App = () => {
-  return <div> lol </div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
