@@ -1,4 +1,4 @@
-// import { ReactComponent as FormIcon } from "../assets/success-form.svg";
+import { ReactComponent as SuccesIcon } from "../assets/success-form.svg";
 import { useEffect, useState } from "react";
 import { CommonInput } from "../common/input";
 import { CommonButton } from "../common/button";
@@ -29,7 +29,8 @@ export const SignUp = () => {
   return (
     <section id="sign-up" className="sign-up">
       <div className="sign-up_box media_padding">
-        <h4 className="text_title">Working with POST request</h4>
+        <SubmittedSuccessfully />
+        {/* <h4 className="text_title">Working with POST request</h4>
         <div className="sign-up_form">
           <div className="sign-up_form_inputs">
             <CommonInput label="Your name" />
@@ -53,8 +54,17 @@ export const SignUp = () => {
             <div className="text_paragraph">Select your image</div>
             <CommonButton disabled={true} text="Sign up" type="submit" />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
+  );
+};
+
+const SubmittedSuccessfully = () => {
+  return (
+    <div className="success_form">
+      <h4 className="text_title">User successfully registered</h4>
+      <SuccesIcon />
+    </div>
   );
 };

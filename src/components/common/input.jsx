@@ -2,6 +2,11 @@ import { TextField } from "@mui/material";
 
 export const CommonInput = ({ label, helperText }) => {
   return (
-    <TextField label={label} variant="outlined" helperText={helperText || ""} />
+    <TextField
+      error
+      label={label}
+      variant="outlined"
+      helperText={helperText || "Incorect"}
+    />
   );
 };
