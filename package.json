@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "react-svg-loader": "^3.0.3"
+    "react-svg-loader": "^3.0.3",
+    "sass": "^1.69.5"
   }
 }

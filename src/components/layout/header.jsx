@@ -3,10 +3,10 @@ import { Button } from "../common/button";
 
 export const Header = () => {
   return (
-    <header>
-      <div>
+    <header className="header">
+      <div className="header_box">
         <LogoIcon />
-        <div>
+        <div className="header_box_buttons">
           <Button text="Users" />
           <Button text="Sign up" />
         </div>

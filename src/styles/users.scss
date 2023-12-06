@@ -1,0 +1,30 @@
+.users {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.users_box {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.users_box_cards {
+  display: flex;
+  gap: 29px;
+  flex-wrap: wrap;
+}
+
+.card_box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+}

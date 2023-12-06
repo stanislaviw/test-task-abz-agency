@@ -3,7 +3,7 @@ import { Main } from "./components/layout/main";
 
 export const App = () => {
   return (
-    <div>
+    <div className="body_box">
       <Header />
       <Main />
     </div>
