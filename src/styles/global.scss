@@ -1,5 +1,7 @@
+$text-color: rgba(0, 0, 0, 0.87);
+
 .text_title {
-  color: rgba(0, 0, 0, 0.87);
+  color: $text-color;
   font-size: 40px;
   font-family: Nunito;
   font-weight: 400;
@@ -8,7 +10,7 @@
 }
 
 .text_paragraph {
-  color: rgba(0, 0, 0, 0.87);
+  color: $text-color;
   font-size: 16px;
   font-family: Nunito;
   font-weight: 400;
