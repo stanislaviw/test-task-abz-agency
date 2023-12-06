@@ -1,0 +1,37 @@
+.sign-up {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up_box {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.sign-up_form {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+.sign-up_form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.sign-up_form_image_uploader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}

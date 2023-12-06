@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "../common/button";
+import { CommonButton } from "../common/button";
 import { UsersCard } from "./card";
 
 export const Users = () => {
@@ -28,7 +28,7 @@ export const Users = () => {
             <UsersCard key={user.id} user={user} />
           ))}
         </div>
-        <Button text="Show more" onClick={handleClick} />
+        <CommonButton text="Show more" onClick={handleClick} />
       </div>
     </section>
   );

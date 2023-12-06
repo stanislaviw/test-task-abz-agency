@@ -1,6 +1,6 @@
 import { scrollToSection } from "../../units/scrollToSection";
 import { ReactComponent as LogoIcon } from "../assets/logo.svg";
-import { Button } from "../common/button";
+import { CommonButton } from "../common/button";
 
 export const Header = () => {
   return (
@@ -10,8 +10,8 @@ export const Header = () => {
           <LogoIcon />
         </a>
         <div className="header_box_buttons">
-          <Button text="Users" onClick={() => scrollToSection("users")} />
-          <Button text="Sign up" onClick={() => scrollToSection("sign-up")} />
+          <CommonButton text="Users" onClick={() => scrollToSection("users")} />
+          <CommonButton text="Sign up" onClick={() => scrollToSection("sign-up")} />
         </div>
       </div>
     </header>

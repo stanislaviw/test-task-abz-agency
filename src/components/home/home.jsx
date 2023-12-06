@@ -1,4 +1,4 @@
-import { Button } from "../common/button";
+import { CommonButton } from "../common/button";
 import BACKGROUND_URL from "../assets/home-background.png";
 import { scrollToSection } from "../../units/scrollToSection";
 
@@ -17,7 +17,7 @@ export const Home = () => {
             mind. They should also be excited to learn, as the world of
             Front-End Development keeps evolving.
           </p>
-          <Button text="Sign up" onClick={() => scrollToSection("sign-up")} />
+          <CommonButton text="Sign up" onClick={() => scrollToSection("sign-up")} />
         </div>
         <img
           src={BACKGROUND_URL}
