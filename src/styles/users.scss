@@ -20,6 +20,8 @@
 }
 
 .card_box {
+  width: 100%;
+  max-width: 370px;
   background: white;
   border-radius: 10px;
   padding: 20px;
@@ -27,4 +29,24 @@
   gap: 20px;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.card_box_image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.card_box_text_paragraph {
+  width: 100%;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card_box_text_information {
+  overflow: hidden;
+  width: 100%;
 }

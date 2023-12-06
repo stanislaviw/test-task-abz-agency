@@ -2,7 +2,7 @@
 
 export const SignUp = () => {
   return (
-    <section>
+    <section id="sign-up">
       <div>
         <h4 className="text_title">Working with POST request</h4>
       </div>
