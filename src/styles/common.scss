@@ -12,5 +12,17 @@
   &:disabled {
     background: #b4b4b4;
     color: rgba(255, 255, 255, 0.87);
+    cursor: not-allowed;
+  }
+}
+
+.checkbox_label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    padding: 0;
   }
 }

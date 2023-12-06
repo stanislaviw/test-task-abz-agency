@@ -3,18 +3,29 @@
 import { useEffect, useState } from "react";
 import { CommonInput } from "../common/input";
 import { CommonButton } from "../common/button";
+import { CommonChechbox } from "../common/checkbox";
+
+const data = [
+  { id: 1, name: "Lawyer" },
+  { id: 2, name: "Content manager" },
+  { id: 3, name: "Security" },
+  { id: 4, name: "Designer" },
+];
 
 export const SignUp = () => {
   const [positions, setPositions] = useState([]);
+  const [selectedPosition, setSelectedPosition] = useState("");
 
-  useEffect(() => {
-    fetch("https://frontend-test-assignment-api.abz.agency/api/v1/positions")
-      .then((response) => response.json())
-      .then((data) => setPositions(data.positions))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://frontend-test-assignment-api.abz.agency/api/v1/positions")
+  //     .then((response) => response.json())
+  //     .then((data) => setPositions(data))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   console.log(positions);
+
+  console.log(selectedPosition);
 
   return (
     <section id="sign-up" className="sign-up">
@@ -28,11 +39,20 @@ export const SignUp = () => {
           </div>
           <div className="sign-up_form_checkboxes">
             <p className="text_paragraph">Select your position</p>
-            <div></div>
+            <div className="sign-up_form_checkboxes_box">
+              {data.map((position) => (
+                <CommonChechbox
+                  key={position.id}
+                  label={position.name}
+                  checked={(position.name = selectedPosition.name)}
+                  onChange={() => setSelectedPosition(position)}
+                />
+              ))}
+            </div>
           </div>
           <div className="sign-up_form_image_uploader">
             <div className="text_paragraph">Select your image</div>
-            <CommonButton text="Sign up" type="submit" />
+            <CommonButton disabled={true} text="Sign up" type="submit" />
           </div>
         </div>
       </div>

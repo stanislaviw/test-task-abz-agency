@@ -28,6 +28,19 @@
   padding-bottom: 25px;
 }
 
+.sign-up_form_checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-bottom: 50px;
+}
+
+.sign-up_form_checkboxes_box {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
 .sign-up_form_image_uploader {
   width: 100%;
   display: flex;
