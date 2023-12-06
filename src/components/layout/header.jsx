@@ -4,7 +4,7 @@ import { CommonButton } from "../common/button";
 
 export const Header = () => {
   return (
-    <header className="header">
+    <header className="header media_padding">
       <div className="header_box">
         <a href="/">
           <LogoIcon />

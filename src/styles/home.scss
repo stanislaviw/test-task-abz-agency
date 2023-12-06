@@ -15,12 +15,17 @@
 }
 
 .home_box_text {
+  width: 100%;
+  max-width: 380px;
   position: absolute;
-  width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 .home_box_text_title {
@@ -31,6 +36,7 @@
   line-height: 40px;
   word-wrap: break-word;
   padding-bottom: 21px;
+  text-align: center;
 }
 
 .home_box_text_paragraph {
@@ -41,6 +47,7 @@
   line-height: 26px;
   word-wrap: break-word;
   padding-bottom: 32px;
+  text-align: center;
 }
 
 .home_background {

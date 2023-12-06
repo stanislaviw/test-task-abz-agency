@@ -12,6 +12,11 @@
   align-items: center;
   max-width: 1170px;
   justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header_box_buttons {

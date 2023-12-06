@@ -28,7 +28,7 @@ export const SignUp = () => {
 
   return (
     <section id="sign-up" className="sign-up">
-      <div className="sign-up_box">
+      <div className="sign-up_box media_padding">
         <h4 className="text_title">Working with POST request</h4>
         <div className="sign-up_form">
           <div className="sign-up_form_inputs">

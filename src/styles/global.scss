@@ -1,5 +1,13 @@
 $text-color: rgba(0, 0, 0, 0.87);
 
+.body_box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
 .text_title {
   color: $text-color;
   font-size: 40px;
@@ -7,6 +15,7 @@ $text-color: rgba(0, 0, 0, 0.87);
   font-weight: 400;
   line-height: 40px;
   word-wrap: break-word;
+  text-align: center;
 }
 
 .text_paragraph {
@@ -16,4 +25,24 @@ $text-color: rgba(0, 0, 0, 0.87);
   font-weight: 400;
   line-height: 26px;
   word-wrap: break-word;
+}
+
+.media_padding {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (max-width: 360px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 361px) and (max-width: 796px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: 797px) and (max-width: 1024px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

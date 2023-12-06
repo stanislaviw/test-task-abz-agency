@@ -14,14 +14,14 @@
 }
 
 .users_box_cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 29px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card_box {
   width: 100%;
-  max-width: 370px;
   background: white;
   border-radius: 10px;
   padding: 20px;

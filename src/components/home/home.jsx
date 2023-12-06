@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <section className="home">
       <div className="home_box">
-        <div className="home_box_text">
+        <div className="home_box_text media_padding">
           <h4 className="home_box_text_title">
             Test assignment for front-end developer
           </h4>
@@ -17,7 +17,10 @@ export const Home = () => {
             mind. They should also be excited to learn, as the world of
             Front-End Development keeps evolving.
           </p>
-          <CommonButton text="Sign up" onClick={() => scrollToSection("sign-up")} />
+          <CommonButton
+            text="Sign up"
+            onClick={() => scrollToSection("sign-up")}
+          />
         </div>
         <img
           src={BACKGROUND_URL}

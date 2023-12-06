@@ -21,7 +21,7 @@ export const Users = () => {
 
   return (
     <section className="users" id="users">
-      <div className="users_box">
+      <div className="users_box media_padding">
         <h4 className="text_title">Working with GET request</h4>
         <div className="users_box_cards">
           {users.map((user) => (
