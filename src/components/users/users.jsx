@@ -8,9 +8,7 @@ export const Users = () => {
 
   useEffect(() => {
     fetch(
-      `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=${
-        page * 6
-      }`
+      `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
     )
       .then((response) => response.json())
       .then((data) => setUsers(data.users))
@@ -20,8 +18,6 @@ export const Users = () => {
   const handleClick = () => {
     setPage((prevState) => prevState + 1);
   };
-
-  console.log(page);
 
   return (
     <section className="users" id="users">
