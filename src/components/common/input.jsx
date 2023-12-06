@@ -1,12 +1,36 @@
 import { TextField } from "@mui/material";
+import { useState } from "react";
 
-export const CommonInput = ({ label, helperText }) => {
+export const CommonInput = ({
+  label,
+  helperText,
+  errorText,
+  validateFunction,
+  setFormData,
+}) => {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleChange = (event) => {
+    const inputValue = event.target.value;
+
+    if (validateFunction(inputValue)) {
+      setError(true);
+    } else {
+      setFormData(inputValue);
+      setError(false);
+    }
+    setValue(inputValue);
+  };
+
   return (
     <TextField
-      error
+      value={value}
       label={label}
+      onChange={handleChange}
       variant="outlined"
-      helperText={helperText || "Incorect"}
+      error={error}
+      helperText={error ? errorText : helperText || ""}
     />
   );
 };
