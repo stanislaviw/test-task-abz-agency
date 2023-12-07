@@ -4,14 +4,14 @@ import { UsersCard } from "./card";
 
 export const Users = () => {
   const [page, setPage] = useState(1);
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch(
       `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
     )
       .then((response) => response.json())
-      .then((data) => setUsers(data.users))
+      .then((data) => setData(data))
       .catch((err) => console.log(err));
   }, [page]);
 
@@ -24,11 +24,13 @@ export const Users = () => {
       <div className="users_box media_padding">
         <h4 className="text_title">Working with GET request</h4>
         <div className="users_box_cards">
-          {users.map((user) => (
+          {data?.users?.map((user) => (
             <UsersCard key={user.id} user={user} />
           ))}
         </div>
-        <CommonButton text="Show more" onClick={handleClick} />
+        {data?.total_pages !== page && (
+          <CommonButton text="Show more" onClick={handleClick} />
+        )}
       </div>
     </section>
   );

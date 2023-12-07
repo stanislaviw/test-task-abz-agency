@@ -17,6 +17,7 @@ export const SignUp = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     fetch("https://frontend-test-assignment-api.abz.agency/api/v1/positions")
@@ -37,13 +38,20 @@ export const SignUp = () => {
     nameValue,
     emailValue,
     phoneValue,
-    photoValue
+    photoValue,
+    tokenValue
   ) => {
+    let newPhoneNumber = phoneValue;
+
+    if (!newPhoneNumber.startsWith("+")) {
+      newPhoneNumber = `+${newPhoneNumber}`;
+    }
+
     const formData = new FormData();
     formData.append("position_id", positionValue);
     formData.append("name", nameValue);
     formData.append("email", emailValue);
-    formData.append("phone", phoneValue);
+    formData.append("phone", newPhoneNumber);
     formData.append("photo", photoValue);
 
     console.log(formData);
@@ -52,17 +60,17 @@ export const SignUp = () => {
       method: "POST",
       body: formData,
       headers: {
-        Token: token,
+        Token: tokenValue,
       },
     })
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         if (data.success) {
           setSuccess(true);
         } else {
+          setErrorMessage(data.message);
           setSuccess(false);
         }
       })
@@ -124,12 +132,20 @@ export const SignUp = () => {
                 <CommonImageUpload setImage={setImage} image={image} />
                 <CommonButton
                   onClick={() =>
-                    handleUpload(selectedPosition.id, name, email, phone, image)
+                    handleUpload(
+                      selectedPosition.id,
+                      name,
+                      email,
+                      phone,
+                      image,
+                      token
+                    )
                   }
+                  disabled={!isValid}
                   text="Sign up"
-                  type="submit"
                 />
               </div>
+              <div className="error_message">{errorMessage}</div>
             </form>
           </>
         )}

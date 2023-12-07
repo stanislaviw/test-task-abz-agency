@@ -18,10 +18,15 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 29px;
   width: 100%;
+
+  @media (max-width: 796px) {
+    max-width: 370px;
+  }
 }
 
 .card_box {
   width: 100%;
+  max-width: 370px;
   background: white;
   border-radius: 10px;
   padding: 20px;

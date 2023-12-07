@@ -22,7 +22,7 @@ export const CommonImageUpload = ({ image, setImage }) => {
           setError("Image size should not exceed 5 MB.");
         } else {
           setError("");
-          setImage(URL.createObjectURL(selectedImage));
+          setImage(selectedImage);
           setFileName(selectedImage.name);
         }
       };
