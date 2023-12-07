@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header className="header media_padding">
       <div className="header_box">
-        <a href="/">
+        <a href="https://stanislaviw.github.io/test-task-abz-agency">
           <LogoIcon />
         </a>
         <div className="header_box_buttons">
