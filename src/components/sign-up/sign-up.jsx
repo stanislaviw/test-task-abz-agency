@@ -54,8 +54,6 @@ export const SignUp = () => {
     formData.append("phone", newPhoneNumber);
     formData.append("photo", photoValue);
 
-    console.log(formData);
-
     fetch("https://frontend-test-assignment-api.abz.agency/api/v1/users", {
       method: "POST",
       body: formData,

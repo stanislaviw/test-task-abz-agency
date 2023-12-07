@@ -11,7 +11,10 @@ export const Header = () => {
         </a>
         <div className="header_box_buttons">
           <CommonButton text="Users" onClick={() => scrollToSection("users")} />
-          <CommonButton text="Sign up" onClick={() => scrollToSection("sign-up")} />
+          <CommonButton
+            text="Sign up"
+            onClick={() => scrollToSection("sign-up")}
+          />
         </div>
       </div>
     </header>
