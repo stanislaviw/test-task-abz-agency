@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CommonButton } from "../common/button";
 import { UsersCard } from "./card";
 
-export const Users = () => {
+export const Users = ({ success }) => {
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
 
@@ -13,7 +13,13 @@ export const Users = () => {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));
-  }, [page]);
+  }, [page, success]);
+
+  useEffect(() => {
+    if (success) {
+      setPage(1);
+    }
+  }, [success]);
 
   const handleClick = () => {
     setPage((prevState) => prevState + 1);

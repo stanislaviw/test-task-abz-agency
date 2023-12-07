@@ -8,7 +8,7 @@ import { validateEmail } from "../../units/validateEmail";
 import { validatePhoneNumber } from "../../units/validatePhone";
 import { CommonImageUpload } from "../common/image-uploader";
 
-export const SignUp = () => {
+export const SignUp = ({ setSuccess, success }) => {
   const [positions, setPositions] = useState([]);
   const [token, setToken] = useState("");
   const [selectedPosition, setSelectedPosition] = useState({});
@@ -16,7 +16,6 @@ export const SignUp = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [success, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
