@@ -3,6 +3,10 @@
   height: 650px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 796px) {
+    height: 500px;
+  }
 }
 
 .home_box {
