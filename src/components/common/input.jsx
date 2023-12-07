@@ -14,8 +14,9 @@ export const CommonInput = ({
   const handleChange = (event) => {
     const inputValue = event.target.value;
 
-    if (validateFunction(inputValue)) {
+    if (!validateFunction(inputValue)) {
       setError(true);
+      setFormData("");
     } else {
       setFormData(inputValue);
       setError(false);
@@ -25,6 +26,7 @@ export const CommonInput = ({
 
   return (
     <TextField
+      className="input"
       value={value}
       label={label}
       onChange={handleChange}
